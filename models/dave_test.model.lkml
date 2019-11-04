@@ -11,6 +11,10 @@ datagroup: dave_test_default_datagroup {
 persist_with: dave_test_default_datagroup
 
 explore: accidents {
+  access_filter: {
+    field: aircrafts.aircraft_model_id
+    user_attribute: allowed_model_id
+  }
   join: aircrafts {
     type: left_outer
     sql_on: ${accidents.aircraft_id} = ${aircrafts.id} ;;
@@ -33,6 +37,9 @@ explore: accidents {
 
 explore: aircraft_models {}
 explore: daves_pdt {}
+explore: aircraftsA {
+  from: aircrafts
+}
 
 explore: aircrafts {
   join: aircraft_models {

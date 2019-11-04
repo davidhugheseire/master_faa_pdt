@@ -3,7 +3,7 @@ derived_table: {
 sql:  SELECT
  accidents.id  AS "id",
   DATE(accidents.event_date ) AS "event_date",
-  accidents.airport_name  AS "airport_name",
+  accidents.airport_name  AS "airport_name1",
   DATE(aircrafts.air_worth_date ) AS "air_worth_date",
   aircrafts.name  AS "name",
   aircraft_models.model  AS "model",
@@ -29,7 +29,7 @@ dimension: id {
 dimension: event_date {
   type: date
 }
-dimension: airport_name {
+dimension: airport_name1 {
   type: string
 }
 dimension: air_worth_date {
