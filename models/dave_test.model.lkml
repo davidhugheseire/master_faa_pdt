@@ -32,6 +32,7 @@ explore: accidents {
 }
 
 explore: aircraft_models {}
+explore: daves_pdt {}
 
 explore: aircrafts {
   join: aircraft_models {
