@@ -19,6 +19,7 @@ explore: accidents {
     type: left_outer
     sql_on: ${accidents.aircraft_id} = ${aircrafts.id} ;;
     relationship: many_to_one
+    #testing revert out
   }
 
   join: aircraft_models {
